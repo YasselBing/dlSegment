@@ -1,6 +1,6 @@
 # encoding:utf-8
 '''
-深度学习序列处理
+深度学习model模型
 Created By Yassel Bing
 Date:2017-8-22
 '''
@@ -100,7 +100,9 @@ class WordSegment(object):
                                  validation_split=0.2,
                                  epochs=1,
                                  batch_size=64)
+
         print(history)
+        self.model.save(self.model_path)
 
     def predict(self, sentence):
         '''
