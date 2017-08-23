@@ -7,6 +7,7 @@ SequentialLSTM：
 一共三个文件夹：
 code：
 preprocess：预处理，用于给训练数据标记；
+SequentialLSTM.py：模型主程序
 
 data：
 test_msr_training_text：训练数据（部分样例）
