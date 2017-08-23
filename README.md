@@ -72,11 +72,19 @@ Reference：https://github.com/qiaofei32/dnn-lstm-word-segment
 
 Model
 
-SequentialLSTM的model版
+（1）ModelLSTM
+
+是SequentialLSTM的model版
 
 另外把fit_generator改成了fit,一个一个处理太慢了，即便多核，也还是太慢了。如果能一次性加入内存还是加载到内存好了。
 
 modelLSTM的网络结构
+
+（2）ModelBiLSTM
+
+把单个LSTM变成了多层双端LSTM，加入双端是有必要的，因为是否成词上下文都要看，不过两层有点没有必要。可以尝试一下把shingling调整的更大，因为有的词的词长会大于5。
+
+注意一点的是：第一层LSTM的return_sequences要改为True，否则下一层会没有输入会报错。
 
 
 
