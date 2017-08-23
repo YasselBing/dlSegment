@@ -1,6 +1,9 @@
 # dlSegment
 中文分词程序（Chinese Word Segment）
 使用深度学习框架keras的序贯模型解决中文分词问题。
+
+SequentialLSTM：
+
 一共三个文件夹：
 code：
 preprocess：预处理，用于给训练数据标记；
