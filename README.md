@@ -26,8 +26,9 @@ numpy、gensim、keras、jieba
 给每个字加上BMES的标记
 （3）训练数据生成
 padding补充数据，防止后面的数据丢失、读取词向量、生成训练数据
-
+（4）训练模型
 网络结构：
+序贯模型
 model = Sequential()
 model.add(LSTM(512))
 model.add(Dropout(0.5))
