@@ -9,6 +9,8 @@ import os
 import codecs
 from sklearn.externals import joblib
 
+import jieba
+
 
 def load_data(input_file, output_file):
     '''
@@ -20,7 +22,8 @@ def load_data(input_file, output_file):
     input_data = codecs.open(input_file, 'r', 'utf-8')
     output_data = codecs.open(output_file, 'w', 'utf-8')
     for line in input_data.readlines():
-        word_list = line.strip().split()
+        word_list = jieba.cut(line.strip())
+        # word_list = line.strip().split()
         for word in word_list:
             if len(word) == 1:
                 output_data.write(word + "/S ")
