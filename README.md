@@ -46,3 +46,8 @@ model.add(Activation("softmax"))
 Reference：https://github.com/qiaofei32/dnn-lstm-word-segment
 
 
+
+Model
+SequentialLSTM的model版
+另外把fit_generator改成了fit,一个一个处理太慢了，即便多核，也还是太慢了。如果能一次性加入内存还是加载到内存好了。
+
